@@ -1,0 +1,41 @@
+{
+
+    "manifest_version": 2,
+    "name": "ACL Calendário Reservas",
+    "version": "0.1",
+
+    "description": "Permite ver as reservas do ACL num calendário.",
+
+    "icons": {
+        "48": "icons/acl-icon-48.png",
+        "96": "icons/acl-icon-96.png"
+    },
+
+    "page_action": {
+        "browser_style": true,
+        "show_matches": ["https://app.aeroclubeleiria.pt/*"],
+        "default_icon": {
+            "48": "icons/acl-icon-48.png",
+            "96": "icons/acl-icon-96.png"
+        },
+        "default_title": "Calendário"
+    },
+
+    "permissions": [
+        "activeTab", "webRequest", "webRequestBlocking", "https://app.aeroclubeleiria.pt/*",
+        "tabs",
+        "storage"
+    ],
+
+    "background": {
+        "scripts": ["reservas-acl.js"]
+    },
+
+    "web_accessible_resources": [
+        "reservas/reservas.html",
+        "reservas/reservas.js",
+        "reservas/reservas/full-calendar/main.js",
+        "reservas/reservas/full-calendar/main.css",
+        "reservas/reservas/full-calendar/locales/pt.js"
+      ]
+}
