@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "ACL Calendário Reservas",
-    "version": "1.0.1",
+    "version": "1.0.2",
 
     "description": "Permite ver as reservas do ACL num calendário.",
 

@@ -79,7 +79,10 @@ function initCalendar(dataJson) {
                         else if(selAeroId == 2 && element.aeronave === "D-EAYS"){
                             dates.push(dateTest);
                         }
-                        else if (selAeroId == 0 && (element.aeronave === "D-EAYS" || element.aeronave === "D-EAYV")){
+                        else if(selAeroId == 3 && element.aeronave === "CS-DPR"){
+                            dates.push(dateTest);
+                        }
+                        else if (selAeroId == 0 && (element.aeronave === "D-EAYS" || element.aeronave === "D-EAYV" || element.aeronave === "CS-DPR")){
                             dates.push(dateTest);
                         }
                     }
