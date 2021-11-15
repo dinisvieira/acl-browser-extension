@@ -67,9 +67,6 @@ function initCalendar(dataJson) {
                             editable: false
                         }
 
-                        // <option value="1">D-EAYV</option>
-                        // <option value="2">D-EAYS</option>
-                        // <option value="0">TODOS</option>
                         var selAero = document.getElementById("aeronavePicker");
                         var selAeroId = selAero.value;
 
@@ -82,7 +79,10 @@ function initCalendar(dataJson) {
                         else if(selAeroId == 3 && element.aeronave === "CS-DPR"){
                             dates.push(dateTest);
                         }
-                        else if (selAeroId == 0 && (element.aeronave === "D-EAYS" || element.aeronave === "D-EAYV" || element.aeronave === "CS-DPR")){
+                        else if(selAeroId == 4 && element.aeronave === "CS-AQN"){
+                            dates.push(dateTest);
+                        }
+                        else if (selAeroId == 0 && (element.aeronave === "D-EAYS" || element.aeronave === "D-EAYV" || element.aeronave === "CS-DPR" || element.aeronave === "CS-AQN")){
                             dates.push(dateTest);
                         }
                     }
