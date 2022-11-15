@@ -1,24 +1,17 @@
 {
 
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "ACL Calendário Reservas",
     "version": "1.0.5",
 
     "description": "Permite ver as reservas do ACL num calendário.",
-
-    "applications": {
-        "gecko": {
-          "id": "dinis@hey.com",
-          "strict_min_version": "70.0"
-        }
-    },
 
     "icons": {
         "48": "icons/acl-icon-48.png",
         "96": "icons/acl-icon-96.png"
     },
 
-    "page_action": {
+    "action": {
         "browser_style": true,
         "show_matches": ["https://app.aeroclubeleiria.pt/*"],
         "default_icon": {
@@ -28,19 +21,18 @@
         "default_title": "Calendário"
     },
 
-    "permissions": [
-        "https://app.aeroclubeleiria.pt/*",
+    "permissions": [   
         "tabs",
         "storage"
     ],
+	"host_permissions": [
+		"https://app.aeroclubeleiria.pt/*"
+	],
 
-    "background": {
-        "scripts": [
-            "reservas/browser-polyfill.min.js", 
-            "background.js"
-        ],
-        "persistent" : true
-    },
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	},
 
     "content_scripts": [{
         "matches": ["https://app.aeroclubeleiria.pt/*"],
@@ -50,12 +42,14 @@
         ],
         "run_at": "document_start"
     }],
-
-    "web_accessible_resources": [
-        "reservas/reservas.html",
-        "reservas/reservas.js",
-        "reservas/reservas/full-calendar/main.js",
-        "reservas/reservas/full-calendar/main.css",
-        "reservas/reservas/full-calendar/locales/pt.js"
-      ]
+    "web_accessible_resources": [{
+    	"resources": [
+			"reservas/reservas.html",
+			"reservas/reservas.js",
+			"reservas/reservas/full-calendar/main.js",
+			"reservas/reservas/full-calendar/main.css",
+			"reservas/reservas/full-calendar/locales/pt.js"
+        ],
+		"matches": ["http://*/*", "https://*/*"]
+    }]
 }

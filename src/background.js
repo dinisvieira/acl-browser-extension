@@ -1,4 +1,4 @@
-console.log("reservas-acl.js: extension initializing.");
+console.log("Reservas ACL 'background.js': extension initializing.");
 
 function openReservasPage() {
     browser.tabs.create({

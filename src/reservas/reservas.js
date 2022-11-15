@@ -76,13 +76,13 @@ function initCalendar(dataJson) {
                         else if(selAeroId == 2 && element.aeronave === "D-EAYS"){
                             dates.push(dateTest);
                         }
-                        else if(selAeroId == 3 && element.aeronave === "CS-DPR"){
+                        else if(selAeroId == 3 && element.aeronave === "G-OBEN"){
                             dates.push(dateTest);
                         }
                         else if(selAeroId == 4 && element.aeronave === "CS-AQN"){
                             dates.push(dateTest);
                         }
-                        else if (selAeroId == 0 && (element.aeronave === "D-EAYS" || element.aeronave === "D-EAYV" || element.aeronave === "CS-DPR" || element.aeronave === "CS-AQN")){
+                        else if (selAeroId == 0 && (element.aeronave === "D-EAYS" || element.aeronave === "D-EAYV" || element.aeronave === "G-OBEN" || element.aeronave === "CS-AQN")){
                             dates.push(dateTest);
                         }
                     }
